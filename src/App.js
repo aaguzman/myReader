@@ -5,13 +5,11 @@ import * as BooksAPI from './BooksAPI'
 import './App.css'
 
 class BooksApp extends React.Component {
-
   state = {
     books: [],
     options: ["currentlyReading","wantToRead","read"],
     searchedBooks: [],
   }
-
 
   componentDidMount(){
     BooksAPI.getAll().then((books) => {
@@ -34,8 +32,6 @@ class BooksApp extends React.Component {
 
   searchBooks = (term) => {
     BooksAPI.search(term).then((books)=>{
-      
-     console.log("Books",books);
      books?
       books.length?
       this.setState((prevState)=>({
@@ -51,19 +47,7 @@ class BooksApp extends React.Component {
       })
       
     })
-   
-
   }
-
-  
-  getAll = () => {
-  console.log("state", this.state);
-  
-  }
-
-  
- 
-
 
   render() {
     return (
@@ -90,7 +74,6 @@ class BooksApp extends React.Component {
             <div className="list-books">
             <div className="list-books-title">
               <h1>MyReads</h1>
-              <button onClick = {() => (this.getAll())} >Get All</button>
             </div>
             <div className="list-books-content">
               <div>
@@ -111,8 +94,6 @@ class BooksApp extends React.Component {
             </div>
           </div>
           )} />
-         
-      
       </div>
     )
   }
