@@ -21,7 +21,7 @@ class BookShelf extends Component {
                       />
                   ))
                   :
-                  <li></li>
+                  <li> No Items present</li>
                 
                 }
               </ol>

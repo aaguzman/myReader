@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
-
 class Book extends Component {
-
     render(){
-      
         const book = this.props.book
+        console.log(book);
+        
         const title = book.title
         const author = book.authors
         let image, shelf
@@ -14,8 +13,7 @@ class Book extends Component {
         shelf = book.shelf 
         :
         shelf = "none"
-        
-
+  
         book.imageLinks ? 
         image = book.imageLinks.thumbnail
         :
