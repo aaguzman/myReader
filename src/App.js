@@ -38,7 +38,9 @@ class BooksApp extends React.Component {
         books.forEach(newBook => {
           this.state.books.forEach((oldBook) => {
             if(oldBook.id === newBook.id)
-              newBook.shelf = oldBook.shelf     
+              newBook.shelf = oldBook.shelf 
+            else
+              newBook.shelf = "none"    
           }) 
         }),
         this.setState((prevState)=>({
@@ -71,6 +73,7 @@ class BooksApp extends React.Component {
             onSearch = {this.searchBooks} 
             onShelfChange = {this.onShelfChange}
             clearSearch = {this.clearSearch}
+            onShelfChange = {this.onShelfChange}
           />
         )} />
         <Route exact path = '/' render = {() => (

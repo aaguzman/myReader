@@ -7,6 +7,7 @@ class Search extends Component {
     render(){
         const searchBooks = this.props.onSearch
         const clearSearch = this.props.clearSearch
+        const onShelfChange = this.props.onShelfChange
         const books = this.props.books
    
         return(
@@ -21,7 +22,7 @@ class Search extends Component {
             <div className="search-books-results">
             <BookShelf  
                        books = {books} 
-                       onShelfChange = {this.props.onSearch} 
+                       onShelfChange = {this.props.onShelfChange} 
                        key = "found"/>
             </div>
           </div>
