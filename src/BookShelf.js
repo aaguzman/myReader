@@ -7,7 +7,7 @@ class BookShelf extends Component {
         const books = this.props.books
         const onShelfChange = this.props.onShelfChange
         return(
-            <div className="bookshelf">
+          <div className="bookshelf">
             <h2 className="bookshelf-title">{title}</h2>
             <div className="bookshelf-books">
               <ol className="books-grid">
@@ -30,5 +30,4 @@ class BookShelf extends Component {
         )
     }
 }
-
 export default BookShelf
