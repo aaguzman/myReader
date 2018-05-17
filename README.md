@@ -5,7 +5,7 @@ First Project for Udacity React Nano Degree. Allows the user to search books and
 
 npm install
 
-npm run
+npm start
 
 ##Authors
 Udacity and Aaron Guzman
