@@ -39,8 +39,7 @@ class BooksApp extends React.Component {
           this.state.books.forEach((oldBook) => {
             if(oldBook.id === newBook.id)
               newBook.shelf = oldBook.shelf 
-            else
-              newBook.shelf = "none"    
+         
           }) 
         }),
         this.setState((prevState)=>({
